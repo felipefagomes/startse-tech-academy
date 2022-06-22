@@ -20,5 +20,21 @@ function adicionaTarefa(descricaoTarefa) {
     elementoSPAN.textContent = descricaoTarefa;
 
     elementoLI.appendChild(elementoSPAN);
+    elementoLI.appendChild(adicionaBotaoRemover());
+
     return elementoLI;
+}
+
+//função para adicionar o botão remover em cada item da lista
+function adicionaBotaoRemover() {
+    const botaoRemover = document.createElement('button');
+    botaoRemover.textContent = '✖';
+    botaoRemover.className = 'remove-button';
+
+    //manipulador do evento 'click' do botão de remover tarefa
+    botaoRemover.addEventListener('click', function() {
+        listaTarefas.removeChild(this.parentNode);
+    });
+
+    return botaoRemover;
 }

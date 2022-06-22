@@ -19,6 +19,7 @@ body {
 
 body h2 {
     padding: 1rem;
+    margin-top: 1rem;
 }
 
 .task-container {
@@ -26,11 +27,19 @@ body h2 {
     padding: 1rem;
 }
 
+#botaoAdicionar {
+    margin: 0 0.5rem;
+}
+
 .task-list {
     height: 90vh;
     padding: 1rem;
     list-style-position: inside;
-    line-height: 2rem;
+    line-height: 2.7rem;
+}
+
+.remove-button {
+    margin: 0 0.5rem;
 }
 
 footer {
@@ -39,7 +48,9 @@ footer {
 
 footer p{
     font-size: 1.1rem;
+    font-style: italic;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
