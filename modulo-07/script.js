@@ -20,7 +20,20 @@ function adicionaTarefa(descricaoTarefa) {
     elementoSPAN.textContent = descricaoTarefa;
 
     elementoLI.appendChild(elementoSPAN);
+    elementoLI.setAttribute('class','naoRealizada');
     elementoLI.appendChild(adicionaBotaoRemover());
+
+    //manipulador do evento 'click' do elemento span contendo um item da lista de tarefas
+    elementoSPAN.addEventListener('click', function() {
+        if(this.id === 'tarefa') {
+            if(this.parentNode.className === 'naoRealizada') {
+                this.parentNode.className = 'realizada';
+            }
+            else {
+                this.parentNode.className = 'naoRealizada';
+            }
+        }
+    });
 
     return elementoLI;
 }
